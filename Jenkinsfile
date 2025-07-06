@@ -1,9 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'Maven_3.9.10'  // Or remove this line if you’re using full path in bat
-    }
 
     stages {
         stage('Checkout') {
