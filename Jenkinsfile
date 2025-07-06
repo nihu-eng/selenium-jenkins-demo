@@ -4,9 +4,11 @@ pipeline {
 
     stages {
         stage('Checkout') {
-            steps {
-                git 'https://github.com/your-username/selenium-jenkins-demo.git'
-            }
+
+               steps {
+                   git credentialsId: 'github-token', url: 'https://github.com/nihu-eng/selenium-jenkins-demo.git'
+               }
+
         }
 
         stage('Build & Test') {
