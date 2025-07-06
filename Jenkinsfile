@@ -6,7 +6,8 @@ pipeline {
         stage('Checkout') {
 
                steps {
-                   git credentialsId: 'github-token', url: 'https://github.com/nihu-eng/selenium-jenkins-demo.git'
+               git branch: 'main',
+                   credentialsId: 'github-token', url: 'https://github.com/nihu-eng/selenium-jenkins-demo.git'
                }
 
         }
