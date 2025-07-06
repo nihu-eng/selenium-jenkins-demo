@@ -1,5 +1,6 @@
 package com.tests;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
@@ -11,9 +12,13 @@ public class LoginTests {
 
     @BeforeTest
     public void setup() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver_path"); // Replace with your ChromeDriver path
+       /* System.setProperty("webdriver.chrome.driver", "C:\\Users\\Niharika\\Downloads\\selenium-java-4.33.0"); // Replace with your ChromeDriver path
         driver = new ChromeDriver();
-        driver.get("https://example.com/login");
+        */
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.get("https://www.facebook.com/");
+
     }
 
     @Test
